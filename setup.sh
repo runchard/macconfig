@@ -2,6 +2,7 @@
 
 set -ex
 
+echo "set up the configs"
 homeprefix="$(pwd)/home"
 for source_file in $homeprefix/**/*(.DG); do
     target_file="${HOME}/${source_file#$homeprefix/}"
@@ -9,7 +10,6 @@ for source_file in $homeprefix/**/*(.DG); do
         mkdir -p ${target_file%/*}
         ln $source_file $target_file
     fi
-
 done
 
 

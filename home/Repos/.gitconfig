@@ -1,0 +1,4 @@
+[user]
+	name = Runchard
+[core]
+	sshCommand = ssh -i ~/.ssh/id_ed25519_github -F /dev/null
