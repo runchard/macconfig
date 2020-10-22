@@ -1,0 +1,6 @@
+git_protocol: ssh
+editor: !!null emacs
+prompt: enabled
+pager: less
+aliases:
+    co: pr checkout

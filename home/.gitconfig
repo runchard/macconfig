@@ -1,0 +1,29 @@
+[user]
+	useConfigOnly = true
+	name = user
+	email = user@example.com
+[ui]
+	color = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[core]
+	ignorecase = false
+	autocrlf = input
+	filemode = false
+	safecrlf = true
+	editor = vim
+	repositoryformatversion = 0
+	bare = false
+	logallrefupdates = true
+	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | diff-so-fancy | less -r
+	precomposeunicode = true
+[pull]
+	default = simple
+	rebase = true
+[push]
+	default = simple
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
