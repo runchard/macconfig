@@ -1,4 +1,5 @@
 eval "$(starship init zsh)"
+[[ $EMACS = t ]] && unsetopt zle
 
 # common day
 # ls, the common ones I use a lot shortened for rapid fire usage
@@ -58,6 +59,7 @@ if which ruby >/dev/null && which gem >/dev/null; then
     PATH="${PATH}:$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
 fi
 
+alias emacs='$(/Applications/Emacs.app/Contents/MacOS/Emacs "$@")'
 export VISUAL=emacs
 export EDITOR=emacs
 export GIT_EDITOR=emacs
