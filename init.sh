@@ -9,8 +9,3 @@ brew tap caskroom/versions
 brew cask install karabiner-elements dash sequel-pro emacs caffeine docker hammerspoon alfred telegram the-unarchiver gpg-suite popclip
 
 ssh-keygen -t ed25519 -C "r"
-
-mkdir Repos
-cd Repos
-# for emacs
-git clone --recurse-submodules -j8 git@github.com:runchard/rum.git
