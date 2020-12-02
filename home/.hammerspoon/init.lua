@@ -3,7 +3,7 @@
 -- ref:
 -- http://larryhynes.net/2015/02/switching-from-slate-to-hammerspoon.html
 
-local hyper = {"shift", "cmd", "alt", "ctrl"}
+local baseModifier = {"shift", "cmd"}
 hs.window.animationDuration = 0
 
 require("hs.application")
@@ -34,7 +34,7 @@ end
 
 
 -- rotate window to left/right/gold-ratio of screen
-hs.hotkey.bind(hyper, "g", function()
+hs.hotkey.bind(baseModifier, "g", function()
                   if hs.window.focusedWindow() then
                      local win = hs.window.focusedWindow()
                      local f = win:frame()
@@ -66,7 +66,7 @@ hs.hotkey.bind(hyper, "g", function()
 end)
 
 -- Moves window to left-half/right-half/full screen
-hs.hotkey.bind(hyper, "l", function()
+hs.hotkey.bind(baseModifier, "l", function()
                   if hs.window.focusedWindow() then
 
                      local win = hs.window.focusedWindow()
@@ -102,12 +102,12 @@ end)
 
 
 -- Hyper i to show window hints
-hs.hotkey.bind(hyper, "i", function()
+hs.hotkey.bind(baseModifier, "i", function()
                   hs.hints.windowHints()
 end)
 
 -- Hyper ' move to next screen
-hs.hotkey.bind(hyper, "'", function()
+hs.hotkey.bind(baseModifier, "'", function()
                   print("move to next screen")
                   if hs.window.focusedWindow() then
                      local win = hs.window.focusedWindow()
