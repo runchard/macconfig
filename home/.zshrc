@@ -75,3 +75,7 @@ pr () {
         gh pr checkout $1
     fi
 }
+if [ $(sysctl hw.machine | awk '{print $2}') = "arm64" ]; then
+    echo 'Silicon Mac mode'
+    export ARCHFLAGS='-arch arm64'
+fi
