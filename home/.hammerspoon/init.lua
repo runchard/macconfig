@@ -3,7 +3,7 @@
 -- ref:
 -- http://larryhynes.net/2015/02/switching-from-slate-to-hammerspoon.html
 
-local baseModifier = {"shift", "cmd"}
+local baseModifier = {"ctrl", "cmd"}
 hs.window.animationDuration = 0
 
 require("hs.application")
