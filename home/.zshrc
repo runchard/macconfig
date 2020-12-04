@@ -59,7 +59,6 @@ if which ruby >/dev/null && which gem >/dev/null; then
     PATH="${PATH}:$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
 fi
 
-alias emacs='$(/Applications/Emacs.app/Contents/MacOS/Emacs "$@")'
 export VISUAL=emacs
 export EDITOR=emacs
 export GIT_EDITOR=emacs
@@ -77,5 +76,6 @@ pr () {
 }
 if [ $(sysctl hw.machine | awk '{print $2}') = "arm64" ]; then
     echo 'Silicon Mac mode'
+    export PATH="${PATH}:/opt/homebrew/bin"
     export ARCHFLAGS='-arch arm64'
 fi
