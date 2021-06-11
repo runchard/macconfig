@@ -7,6 +7,7 @@ alias s='ssh'
 alias l='exa -lFh --git'     # size, show type, human readable, git
 alias lr='exa -tRFh'   #sorted by date,recursive,show type,human readable
 alias ldot='exa -ld .*'
+alias dotgit='/usr/bin/git --git-dir=$HOME/Repos/macconfig/home/ --work-tree=$HOME'
 
 alias zshrc='${=EDITOR} ~/.zshrc' # Quick access to the ~/.zshrc file
 
