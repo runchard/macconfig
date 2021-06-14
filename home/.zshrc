@@ -77,6 +77,6 @@ pr () {
 }
 if [ $(sysctl hw.machine | awk '{print $2}') = "arm64" ]; then
     echo 'Silicon Mac mode'
-    export PATH="${PATH}:/opt/homebrew/bin"
+    export PATH="/opt/homebrew/bin:${PATH}"
     export ARCHFLAGS='-arch arm64'
 fi
